@@ -1,0 +1,15 @@
+---
+description: CSS 与设计系统规范
+globs: **/*.css
+alwaysApply: false
+---
+
+# CSS Design System Rules
+
+- 全局样式集中在 `src/app/globals.css`，不要新增分散样式文件。
+- 颜色必须使用 `:root` 变量（`--bg`、`--text`、`--accent` 等），禁止新增 hex 硬编码。
+- 组件样式使用语义类名（如 `.hero-*`、`.post-*`、`.vision-*`），避免无语义命名。
+- 文案与交互统一复用动作类：`action-primary`、`action-secondary`、`action-text`。
+- 响应式断点统一 `@media (max-width: 700px)`，避免多套断点体系。
+- 动画与过渡保持克制：建议 `140ms-320ms ease`，避免夸张动效。
+- 改样式前后保持导航色板一致性，遵循 `DESIGN_SPEC.md`。

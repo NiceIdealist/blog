@@ -1,0 +1,15 @@
+---
+description: TypeScript 类型与实现规范
+globs: **/*.ts
+alwaysApply: false
+---
+
+# TypeScript Rules
+
+- 遵循 `strict: true`，禁止 `any`、`@ts-ignore` 与隐式不安全类型。
+- 公共类型优先集中在 `src/lib/` 或模块顶层导出，避免重复定义。
+- 函数签名显式声明返回类型，特别是异步函数（`Promise<T>`）。
+- 工具函数命名清晰、可组合，如 `categoryToSlug`、`getCategoryLabel`。
+- 读写文件统一使用 `node:fs/promises`，路径处理使用 `node:path`。
+- 字符串字面量映射（如分类标签）优先用集中函数维护，避免散落硬编码。
+- 修改类型时，同步检查所有引用点，保证页面与组件类型一致。

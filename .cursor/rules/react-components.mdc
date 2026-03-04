@@ -1,0 +1,15 @@
+---
+description: React 组件与 TSX 规范
+globs: src/components/**/*.tsx
+alwaysApply: false
+---
+
+# React Component Rules
+
+- 使用函数组件与命名导出：`export function ComponentName()`。
+- `props` 使用独立 `type` 显式定义，禁止 `any`。
+- 组件职责单一：数据获取放页面或 `lib`，组件专注展示与交互。
+- 复用优先：通用 UI 放 `src/components/`，页面专属逻辑留在 `src/app/`。
+- 按钮/链接优先复用 `action-primary`、`action-secondary`、`action-text`。
+- 装饰性元素使用 `aria-hidden="true"`；交互元素需可访问名称（`aria-label`）。
+- JSX 保持可读性：复杂块拆子组件，避免超长内联逻辑。

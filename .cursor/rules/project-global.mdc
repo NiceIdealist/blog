@@ -1,0 +1,15 @@
+---
+description: 项目全局开发约定
+alwaysApply: true
+---
+
+# Project Global Rules
+
+- 用户可见文案默认使用中文；品牌名 `Ivan Zhang` 保持英文。
+- 路径导入优先使用别名 `@/*`（映射 `./src/*`）。
+- 禁止硬编码主题色，统一使用 `src/app/globals.css` 的 CSS 变量。
+- 新增页面或组件前，先对齐 `DESIGN_SPEC.md` 的设计规范与 checklist。
+- 移动端断点统一为 `700px`，避免新增分裂断点。
+- 不要引入与当前栈不一致的 UI 框架；优先复用现有语义类名。
+- 禁止将密钥、token、`.env`、`credentials.json` 等敏感信息写入仓库。
+- 修改用户可见内容时，保持“简洁、理性、高可读”的文案风格。

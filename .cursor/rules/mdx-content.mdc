@@ -1,0 +1,15 @@
+---
+description: MDX 文章内容与 Frontmatter 规范
+globs: content/posts/**/*.mdx
+alwaysApply: false
+---
+
+# MDX Content Rules
+
+- Frontmatter 必填：`title`、`date`（YYYY-MM-DD）、`column`、`tags`、`excerpt`。
+- Frontmatter 可选：`cover`（建议存放在 `public/covers/`）、`slug`。
+- 正文使用标准 Markdown，段落之间空一行，列表与层级结构清晰。
+- 用户可见文案默认中文；品牌名 `Ivan Zhang` 保持英文。
+- 新增专栏时，需同步更新 `src/lib/posts.ts` 的 `getColumnLabel()` 映射。
+- 摘要 `excerpt` 保持简洁、可读，适配首页 Hero 与卡片列表展示。
+- 内容风格统一：理性、克制、可执行，避免空泛口号。

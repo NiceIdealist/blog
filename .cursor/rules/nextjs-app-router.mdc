@@ -1,0 +1,15 @@
+---
+description: Next.js App Router 开发约定
+globs: src/app/**/*.tsx
+alwaysApply: false
+---
+
+# Next.js App Router Rules
+
+- `src/app/` 页面默认使用 Server Component；只有确需交互时才加 `"use client"`。
+- 动态路由参数使用 `Promise<T>` 类型，并在组件内 `await params` / `await searchParams`。
+- 可静态化页面优先实现 `generateStaticParams`，提升首屏性能与稳定性。
+- 站内跳转使用 `next/link`，禁止用裸 `<a>` 做内部路由。
+- 页面图片优先 `next/image`，必须带 `alt` 与明确尺寸。
+- 全局 metadata、字体变量统一放在 `src/app/layout.tsx`。
+- 禁止在 Server Component 中调用 `window`、`document`、`localStorage` 等浏览器 API。
